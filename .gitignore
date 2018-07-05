@@ -2917,3 +2917,15 @@
 /Saved/StagedBuilds/WindowsNoEditor/Manifest_ObsoleteNonUFSFiles.txt
 /Saved/StagedBuilds/WindowsNoEditor/Manifest_ObsoleteUFSFiles.txt
 /Saved/StagedBuilds/WindowsNoEditor/Manifest_UFSFiles_Win64.txt
+/Binaries/Win64/UE4Editor-BatteryCollector.dll
+/Binaries/Win64/UE4Editor-BatteryCollector.pdb
+/Intermediate/Build/Win64/UE4Editor/Development/BatteryCollector/BatteryCollector.cpp.obj
+/Intermediate/Build/Win64/UE4Editor/Development/BatteryCollector/BatteryCollector.init.gen.cpp.obj
+/Intermediate/Build/Win64/UE4Editor/Development/BatteryCollector/BatteryCollectorCharacter.cpp.obj
+/Intermediate/Build/Win64/UE4Editor/Development/BatteryCollector/BatteryCollectorCharacter.gen.cpp.obj
+/Intermediate/Build/Win64/UE4Editor/Development/BatteryCollector/BatteryCollectorGameMode.cpp.obj
+/Intermediate/Build/Win64/UE4Editor/Development/BatteryCollector/BatteryCollectorGameMode.gen.cpp.obj
+/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-BatteryCollector.exp
+/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-BatteryCollector.lib
+/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-BatteryCollector.suppressed.exp
+/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-BatteryCollector.suppressed.lib
