@@ -5,3 +5,7 @@
 /Saved/Logs/BatteryCollector.log
 /Saved/Config/Windows/EditorPerProjectUserSettings.ini
 /Saved/Config/Windows/Engine.ini
+/Intermediate/Build/BuildRules/BatteryCollectorModuleRules.dll
+/Intermediate/Build/BuildRules/BatteryCollectorModuleRules.pdb
+/Intermediate/Build/Win64/BatteryCollectorEditor/Development/Makefile.ubt
+/Saved/Config/CrashReportClient/UE4CC-Windows-F5391E1041A8CA69B893D2B2E8635D3F/CrashReportClient.ini
