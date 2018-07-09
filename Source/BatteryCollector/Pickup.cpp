@@ -7,8 +7,11 @@
 APickup::APickup()
 {
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = false;
 
+	// Create the static mesh component
+	this->PickupMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("PickupMesh"));
+	this->RootComponent = this->PickupMesh;
 }
 
 // Called when the game starts or when spawned

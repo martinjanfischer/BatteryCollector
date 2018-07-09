@@ -23,6 +23,11 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	
-	
+	/** Return the mesh for the pickup */
+	FORCEINLINE class UStaticMeshComponent* GetMesh() const { return PickupMesh; }
+
+private:
+	/** Static mesh to represent the pickup in the level */
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Pickup", meta = (AllowPrivateAccess = "true") )
+	class UStaticMeshComponent* PickupMesh;
 };
