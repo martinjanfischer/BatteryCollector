@@ -2959,3 +2959,5 @@
 /Saved/Backup/CollectionLevel_2018-07-09-14-52-25.umap
 /Intermediate/Build/Win64/UE4Editor/Development/*.response
 /Saved/Backup
+/Intermediate/Build/Win64/UE4Editor/Development/*.exp
+/Intermediate/Build/Win64/UE4Editor/Development/*.lib

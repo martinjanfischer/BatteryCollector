@@ -17,10 +17,70 @@ void EmptyLinkFunctionForGeneratedCodePickup() {}
 	BATTERYCOLLECTOR_API UClass* Z_Construct_UClass_APickup();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_BatteryCollector();
+	BATTERYCOLLECTOR_API UFunction* Z_Construct_UFunction_APickup_IsActive();
+	BATTERYCOLLECTOR_API UFunction* Z_Construct_UFunction_APickup_SetActive();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 // End Cross Module References
 	void APickup::StaticRegisterNativesAPickup()
 	{
+		UClass* Class = APickup::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "IsActive", (Native)&APickup::execIsActive },
+			{ "SetActive", (Native)&APickup::execSetActive },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, ARRAY_COUNT(Funcs));
+	}
+	UFunction* Z_Construct_UFunction_APickup_IsActive()
+	{
+		struct Pickup_eventIsActive_Parms
+		{
+			bool ReturnValue;
+		};
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			auto NewProp_ReturnValue_SetBit = [](void* Obj){ ((Pickup_eventIsActive_Parms*)Obj)->ReturnValue = 1; };
+			static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue = { UE4CodeGen_Private::EPropertyClass::Bool, "ReturnValue", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000580, 1, nullptr, sizeof(bool), UE4CodeGen_Private::ENativeBool::Native, sizeof(Pickup_eventIsActive_Parms), &UE4CodeGen_Private::TBoolSetBitWrapper<decltype(NewProp_ReturnValue_SetBit)>::SetBit, METADATA_PARAMS(nullptr, 0) };
+			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_ReturnValue,
+			};
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+				{ "Category", "Pickup" },
+				{ "ModuleRelativePath", "Pickup.h" },
+				{ "ToolTip", "Return whether or not the pickup is active" },
+			};
+#endif
+			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_APickup, "IsActive", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x14020401, sizeof(Pickup_eventIsActive_Parms), PropPointers, ARRAY_COUNT(PropPointers), 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
+		}
+		return ReturnFunction;
+	}
+	UFunction* Z_Construct_UFunction_APickup_SetActive()
+	{
+		struct Pickup_eventSetActive_Parms
+		{
+			bool NewPickupState;
+		};
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			auto NewProp_NewPickupState_SetBit = [](void* Obj){ ((Pickup_eventSetActive_Parms*)Obj)->NewPickupState = 1; };
+			static const UE4CodeGen_Private::FBoolPropertyParams NewProp_NewPickupState = { UE4CodeGen_Private::EPropertyClass::Bool, "NewPickupState", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000080, 1, nullptr, sizeof(bool), UE4CodeGen_Private::ENativeBool::Native, sizeof(Pickup_eventSetActive_Parms), &UE4CodeGen_Private::TBoolSetBitWrapper<decltype(NewProp_NewPickupState_SetBit)>::SetBit, METADATA_PARAMS(nullptr, 0) };
+			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_NewPickupState,
+			};
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+				{ "Category", "Pickup" },
+				{ "ModuleRelativePath", "Pickup.h" },
+				{ "ToolTip", "Allows other classes to safely change whether or not the pickup is active" },
+			};
+#endif
+			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_APickup, "SetActive", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x04020401, sizeof(Pickup_eventSetActive_Parms), PropPointers, ARRAY_COUNT(PropPointers), 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
+		}
+		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_APickup_NoRegister()
 	{
@@ -34,6 +94,10 @@ void EmptyLinkFunctionForGeneratedCodePickup() {}
 			static UObject* (*const DependentSingletons[])() = {
 				(UObject* (*)())Z_Construct_UClass_AActor,
 				(UObject* (*)())Z_Construct_UPackage__Script_BatteryCollector,
+			};
+			static const FClassFunctionLinkInfo FuncInfo[] = {
+				{ &Z_Construct_UFunction_APickup_IsActive, "IsActive" }, // 3300321976
+				{ &Z_Construct_UFunction_APickup_SetActive, "SetActive" }, // 293716771
 			};
 #if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
@@ -61,7 +125,7 @@ void EmptyLinkFunctionForGeneratedCodePickup() {}
 				&APickup::StaticClass,
 				DependentSingletons, ARRAY_COUNT(DependentSingletons),
 				0x00900080u,
-				nullptr, 0,
+				FuncInfo, ARRAY_COUNT(FuncInfo),
 				PropPointers, ARRAY_COUNT(PropPointers),
 				nullptr,
 				&StaticCppClassTypeInfo,
@@ -72,7 +136,7 @@ void EmptyLinkFunctionForGeneratedCodePickup() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(APickup, 2837597552);
+	IMPLEMENT_CLASS(APickup, 3759299042);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_APickup(Z_Construct_UClass_APickup, &APickup::StaticClass, TEXT("/Script/BatteryCollector"), TEXT("APickup"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(APickup);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
