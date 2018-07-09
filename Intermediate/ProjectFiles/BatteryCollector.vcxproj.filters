@@ -4,7 +4,7 @@
 	<ItemGroup>
 		<None Include="..\..\BatteryCollector.uproject" />
 		<Filter Include="Source">
-			<UniqueIdentifier>{65C6ABA4-157A-49D7-8583-9926850CA562}</UniqueIdentifier>
+			<UniqueIdentifier>{12029012-890E-4617-AFA6-7978ED43F27B}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Source\BatteryCollector.Target.cs">
 			<Filter>Source</Filter>
@@ -13,7 +13,7 @@
 			<Filter>Source</Filter>
 		</None >
 		<Filter Include="Config">
-			<UniqueIdentifier>{35BD3295-C33F-478D-8FC3-DDE5E75FD5AC}</UniqueIdentifier>
+			<UniqueIdentifier>{F8455C7A-1B2E-418A-8D4A-5791CC1286FA}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Config\DefaultEditor.ini">
 			<Filter>Config</Filter>
@@ -31,7 +31,7 @@
 			<Filter>Config</Filter>
 		</None >
 		<Filter Include="Source\BatteryCollector">
-			<UniqueIdentifier>{F23B141B-331F-4847-B1B4-832DD2777582}</UniqueIdentifier>
+			<UniqueIdentifier>{3C48E9F7-3ABF-483D-AC0F-880D1DD875B4}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Source\BatteryCollector\BatteryCollector.Build.cs">
 			<Filter>Source\BatteryCollector</Filter>
@@ -52,6 +52,12 @@
 			<Filter>Source\BatteryCollector</Filter>
 		</ClCompile >
 		<ClInclude Include="..\..\Source\BatteryCollector\BatteryCollectorGameMode.h">
+			<Filter>Source\BatteryCollector</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\BatteryCollector\Pickup.cpp">
+			<Filter>Source\BatteryCollector</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\BatteryCollector\Pickup.h">
 			<Filter>Source\BatteryCollector</Filter>
 		</ClInclude >
 	</ItemGroup>
