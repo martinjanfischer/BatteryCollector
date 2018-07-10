@@ -2961,3 +2961,7 @@
 /Saved/Backup
 /Intermediate/Build/Win64/UE4Editor/Development/*.exp
 /Intermediate/Build/Win64/UE4Editor/Development/*.lib
+/Saved/Autosaves/Game/Blueprints/Pickup_BP_Auto1.uasset
+/Saved/Autosaves/Game/Blueprints/Pickup_BP_Auto2.uasset
+Binaries
+.vs
