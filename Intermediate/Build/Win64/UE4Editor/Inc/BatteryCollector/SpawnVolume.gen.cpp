@@ -20,6 +20,8 @@ void EmptyLinkFunctionForGeneratedCodeSpawnVolume() {}
 	BATTERYCOLLECTOR_API UFunction* Z_Construct_UFunction_ASpawnVolume_GetRandomPointInVolume();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	ENGINE_API UClass* Z_Construct_UClass_UBoxComponent_NoRegister();
+	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+	BATTERYCOLLECTOR_API UClass* Z_Construct_UClass_APickup_NoRegister();
 // End Cross Module References
 	void ASpawnVolume::StaticRegisterNativesASpawnVolume()
 	{
@@ -86,8 +88,17 @@ void EmptyLinkFunctionForGeneratedCodeSpawnVolume() {}
 			};
 #endif
 			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WhereToSpawn = { UE4CodeGen_Private::EPropertyClass::Object, "WhereToSpawn", RF_Public|RF_Transient|RF_MarkAsNative, 0x00200800000a001d, 1, nullptr, STRUCT_OFFSET(ASpawnVolume, WhereToSpawn), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(NewProp_WhereToSpawn_MetaData, ARRAY_COUNT(NewProp_WhereToSpawn_MetaData)) };
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_WhatToSpawn_MetaData[] = {
+				{ "Category", "Spawning" },
+				{ "ModuleRelativePath", "SpawnVolume.h" },
+				{ "ToolTip", "The pickup to spawn" },
+			};
+#endif
+			static const UE4CodeGen_Private::FClassPropertyParams NewProp_WhatToSpawn = { UE4CodeGen_Private::EPropertyClass::Class, "WhatToSpawn", RF_Public|RF_Transient|RF_MarkAsNative, 0x0024080000000001, 1, nullptr, STRUCT_OFFSET(ASpawnVolume, WhatToSpawn), Z_Construct_UClass_APickup_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(NewProp_WhatToSpawn_MetaData, ARRAY_COUNT(NewProp_WhatToSpawn_MetaData)) };
 			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_WhereToSpawn,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_WhatToSpawn,
 			};
 			static const FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
 				TCppClassTypeTraits<ASpawnVolume>::IsAbstract,
@@ -107,7 +118,7 @@ void EmptyLinkFunctionForGeneratedCodeSpawnVolume() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ASpawnVolume, 3156107374);
+	IMPLEMENT_CLASS(ASpawnVolume, 3737454216);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_ASpawnVolume(Z_Construct_UClass_ASpawnVolume, &ASpawnVolume::StaticClass, TEXT("/Script/BatteryCollector"), TEXT("ASpawnVolume"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ASpawnVolume);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
