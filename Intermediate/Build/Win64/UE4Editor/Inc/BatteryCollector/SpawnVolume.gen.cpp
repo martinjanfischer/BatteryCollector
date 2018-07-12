@@ -89,6 +89,22 @@ void EmptyLinkFunctionForGeneratedCodeSpawnVolume() {}
 #endif
 			static const UE4CodeGen_Private::FObjectPropertyParams NewProp_WhereToSpawn = { UE4CodeGen_Private::EPropertyClass::Object, "WhereToSpawn", RF_Public|RF_Transient|RF_MarkAsNative, 0x00200800000a001d, 1, nullptr, STRUCT_OFFSET(ASpawnVolume, WhereToSpawn), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(NewProp_WhereToSpawn_MetaData, ARRAY_COUNT(NewProp_WhereToSpawn_MetaData)) };
 #if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SpawnDelayRangeHigh_MetaData[] = {
+				{ "Category", "Spawning" },
+				{ "ModuleRelativePath", "SpawnVolume.h" },
+				{ "ToolTip", "Maximum spawn delay" },
+			};
+#endif
+			static const UE4CodeGen_Private::FFloatPropertyParams NewProp_SpawnDelayRangeHigh = { UE4CodeGen_Private::EPropertyClass::Float, "SpawnDelayRangeHigh", RF_Public|RF_Transient|RF_MarkAsNative, 0x0020080000000005, 1, nullptr, STRUCT_OFFSET(ASpawnVolume, SpawnDelayRangeHigh), METADATA_PARAMS(NewProp_SpawnDelayRangeHigh_MetaData, ARRAY_COUNT(NewProp_SpawnDelayRangeHigh_MetaData)) };
+#if WITH_METADATA
+			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SpawnDelayRangeLow_MetaData[] = {
+				{ "Category", "Spawning" },
+				{ "ModuleRelativePath", "SpawnVolume.h" },
+				{ "ToolTip", "Minimum spawn delay" },
+			};
+#endif
+			static const UE4CodeGen_Private::FFloatPropertyParams NewProp_SpawnDelayRangeLow = { UE4CodeGen_Private::EPropertyClass::Float, "SpawnDelayRangeLow", RF_Public|RF_Transient|RF_MarkAsNative, 0x0020080000000005, 1, nullptr, STRUCT_OFFSET(ASpawnVolume, SpawnDelayRangeLow), METADATA_PARAMS(NewProp_SpawnDelayRangeLow_MetaData, ARRAY_COUNT(NewProp_SpawnDelayRangeLow_MetaData)) };
+#if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam NewProp_WhatToSpawn_MetaData[] = {
 				{ "Category", "Spawning" },
 				{ "ModuleRelativePath", "SpawnVolume.h" },
@@ -98,6 +114,8 @@ void EmptyLinkFunctionForGeneratedCodeSpawnVolume() {}
 			static const UE4CodeGen_Private::FClassPropertyParams NewProp_WhatToSpawn = { UE4CodeGen_Private::EPropertyClass::Class, "WhatToSpawn", RF_Public|RF_Transient|RF_MarkAsNative, 0x0024080000000001, 1, nullptr, STRUCT_OFFSET(ASpawnVolume, WhatToSpawn), Z_Construct_UClass_APickup_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(NewProp_WhatToSpawn_MetaData, ARRAY_COUNT(NewProp_WhatToSpawn_MetaData)) };
 			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_WhereToSpawn,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_SpawnDelayRangeHigh,
+				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_SpawnDelayRangeLow,
 				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_WhatToSpawn,
 			};
 			static const FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -118,7 +136,7 @@ void EmptyLinkFunctionForGeneratedCodeSpawnVolume() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ASpawnVolume, 3737454216);
+	IMPLEMENT_CLASS(ASpawnVolume, 1623359842);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_ASpawnVolume(Z_Construct_UClass_ASpawnVolume, &ASpawnVolume::StaticClass, TEXT("/Script/BatteryCollector"), TEXT("ASpawnVolume"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(ASpawnVolume);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
