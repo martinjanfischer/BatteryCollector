@@ -14,6 +14,10 @@ ABatteryCollectorGameMode::ABatteryCollectorGameMode()
 		DefaultPawnClass = PlayerPawnBPClass.Class;
 	}
 	
+	// If your gamemode class inherits from AGameModeBase instead of AGameMode(for example if you created project in the newest UE(4.14.0)) you have to set
+	PrimaryActorTick.bCanEverTick = true;
+	// in ABatteryCollectorGameMode for draining power to work (otherwise Tick function will not be called). Or you can change it to inherit from AGameMode, it will work too.﻿
+	
 	// base decay rate
 	DecayRate = 0.01f;
 }
