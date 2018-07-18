@@ -4,7 +4,7 @@
 	<ItemGroup>
 		<None Include="..\..\BatteryCollector.uproject" />
 		<Filter Include="Source">
-			<UniqueIdentifier>{F90EF671-DBB6-41DD-A732-1D332A662EE4}</UniqueIdentifier>
+			<UniqueIdentifier>{8A4D13C8-3FD0-4116-9B5E-92F4F91B1110}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Source\BatteryCollector.Target.cs">
 			<Filter>Source</Filter>
@@ -13,7 +13,7 @@
 			<Filter>Source</Filter>
 		</None >
 		<Filter Include="Config">
-			<UniqueIdentifier>{51610E73-5AC2-4898-8AEE-7CF62802742C}</UniqueIdentifier>
+			<UniqueIdentifier>{4D5DD404-CFEE-430D-85E7-15A36626A6DB}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Config\DefaultEditor.ini">
 			<Filter>Config</Filter>
@@ -31,7 +31,7 @@
 			<Filter>Config</Filter>
 		</None >
 		<Filter Include="Source\BatteryCollector">
-			<UniqueIdentifier>{CE29246E-C3AC-4C2B-AB53-FDB8A79721BF}</UniqueIdentifier>
+			<UniqueIdentifier>{A60445E9-51FB-4BA9-BB10-F3BC1FA240F9}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Source\BatteryCollector\BatteryCollector.Build.cs">
 			<Filter>Source\BatteryCollector</Filter>
