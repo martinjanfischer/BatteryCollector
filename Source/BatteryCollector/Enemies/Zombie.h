@@ -6,7 +6,7 @@
 #include "GameFramework/Pawn.h"
 #include "Zombie.generated.h"
 
-class ATank;
+class ABatteryCollectorCharacter;
 
 UCLASS()
 class BATTERYCOLLECTOR_API AZombie : public APawn
@@ -36,18 +36,18 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "AI")
 	AActor* GetTarget();
 
-	// Return the target Actor as a Tank, if possible. Returning NULL indicates no target, or that the tank .
+	// Return the target Actor as a BatteryCollectorCharacter, if possible. Returning NULL indicates no target, or that the BatteryCollectorCharacter .
 	UFUNCTION(BlueprintCallable, Category = "AI")
-	ATank* GetTargetAsTank();
+	ABatteryCollectorCharacter* GetTargetAsBatteryCollectorCharacter();
 	
 private:
 	/** The actor we're targeting. Will be NULL if there is not target. */
 	UPROPERTY(VisibleInstanceOnly, Category = "AI")
 	AActor* TargetActor;
 
-	/** The actor we're targeting, cast to a Tank and cached. Will be NULL if no target if the target a . */
+	/** The actor we're targeting, cast to a BatteryCollectorCharacter and cached. Will be NULL if no target if the target a . */
 	UPROPERTY(VisibleInstanceOnly, Category = "AI")
-	ATank* TargetTank;
+	ABatteryCollectorCharacter* TargetBatteryCollectorCharacter;
 	
 protected:
 	/** Camera effect, if any, to play when the player is hit by this Zombie. */

@@ -1,7 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-#include "Tanks.h"
-#include "Tank.h"
+//#include "Engine/EngineTypes.h"
+#include "BatteryCollector.h"
+#include "BatteryCollectorCharacter.h"
 #include "Zombie.h"
 
 
@@ -11,7 +12,8 @@ AZombie::AZombie()
  	// Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
-	AutoPossessAI = EAutoPossess::PlacedInWorldOrSpawned;
+	AutoPossessAI = EAutoPossessAI::PlacedInWorldOrSpawned;
+	
 	Health = 100.0f;
 	SightDistance = 500.0f;
 	SightAngle = 60.0f;
@@ -47,7 +49,7 @@ void AZombie::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 void AZombie::SetTarget(AActor* NewTarget)
 {
 	TargetActor = NewTarget;
-	TargetTank = Cast<ATank>(NewTarget);
+	TargetBatteryCollectorCharacter = Cast<ABatteryCollectorCharacter>(NewTarget);
 }
 
 AActor* AZombie::GetTarget()
@@ -55,7 +57,7 @@ AActor* AZombie::GetTarget()
 	return TargetActor;
 }
 
-ATank* AZombie::GetTargetAsTank()
+ABatteryCollectorCharacter* AZombie::GetTargetAsBatteryCollectorCharacter()
 {
-	return TargetTank;
+	return TargetBatteryCollectorCharacter;
 }
