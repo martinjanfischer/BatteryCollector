@@ -28,7 +28,7 @@ open the Unreal project file and build it.
 The game was created in **Unreal** version **4.18.3** and Microsoft **Visual Studio 2015** Community.
 
 ## Usage
-To play the game, use **WASD** to move and **C **to collect batteries.
+To play the game, use **WASD** to move and **C** to collect batteries.
 
 ## Branching
 with TortoiseGit see [here](http://joelabrahamsson.com/remote-branches-with-tortoisegit/)
