@@ -14,7 +14,7 @@ I will try to use the Mannequin Rig as Zombie.
 It contains an implementation of the 'Battery Collector' game as described in the Unreal Engine video tutorial series **C++ 3rd Person Battery Collector Power Up Game**
 [here](https://docs.unrealengine.com/latest/INT/Videos/PLZlv_N0_O1gYup-gvJtMsgJqnEB_dGiM4/mSRov77hNR4/index.html)
 and fragments of the implementation of the 'Tanks vs. Zombies' game as described in the Unreal Engine video tutorial series **C++ Tanks vs Zombies**
-[here](https://www.youtube.com/watch?v=NyXq0Hy9xQs&list=PLZlv_N0_O1gaz3ydgU5wt6c_JtJzwXUKW&index=1).
+[here](https://docs.unrealengine.com/en-us/Videos/PLZlv_N0_O1ga0aV9jVqJgog0VWz1cLL5f/NyXq0Hy9xQs).
 
 I added assets from the **Content Examples** as described in 
 [here](https://docs.unrealengine.com/en-us/Resources/ContentExamples).
