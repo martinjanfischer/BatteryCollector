@@ -4,7 +4,7 @@
 	<ItemGroup>
 		<None Include="..\..\BatteryCollector.uproject" />
 		<Filter Include="Source">
-			<UniqueIdentifier>{8A4D13C8-3FD0-4116-9B5E-92F4F91B1110}</UniqueIdentifier>
+			<UniqueIdentifier>{F5C54CC4-13A6-45DB-B742-FFF74F7FDB2D}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Source\BatteryCollector.Target.cs">
 			<Filter>Source</Filter>
@@ -13,7 +13,7 @@
 			<Filter>Source</Filter>
 		</None >
 		<Filter Include="Config">
-			<UniqueIdentifier>{4D5DD404-CFEE-430D-85E7-15A36626A6DB}</UniqueIdentifier>
+			<UniqueIdentifier>{752A37D0-7E21-46F6-A015-CF0F003BC29A}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Config\DefaultEditor.ini">
 			<Filter>Config</Filter>
@@ -31,7 +31,7 @@
 			<Filter>Config</Filter>
 		</None >
 		<Filter Include="Source\BatteryCollector">
-			<UniqueIdentifier>{A60445E9-51FB-4BA9-BB10-F3BC1FA240F9}</UniqueIdentifier>
+			<UniqueIdentifier>{696D91B7-D9FE-4A11-8693-4E146CC991CD}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Source\BatteryCollector\BatteryCollector.Build.cs">
 			<Filter>Source\BatteryCollector</Filter>
@@ -71,6 +71,15 @@
 		</ClCompile >
 		<ClInclude Include="..\..\Source\BatteryCollector\SpawnVolume.h">
 			<Filter>Source\BatteryCollector</Filter>
+		</ClInclude >
+		<Filter Include="Source\BatteryCollector\Enemies">
+			<UniqueIdentifier>{D94E24E2-B573-4B55-843E-B9805EFF4B34}</UniqueIdentifier>
+		</Filter>
+		<ClCompile Include="..\..\Source\BatteryCollector\Enemies\Zombie.cpp">
+			<Filter>Source\BatteryCollector\Enemies</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\BatteryCollector\Enemies\Zombie.h">
+			<Filter>Source\BatteryCollector\Enemies</Filter>
 		</ClInclude >
 	</ItemGroup>
 </Project>
