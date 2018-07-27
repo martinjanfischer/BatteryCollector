@@ -1,8 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-#include "Tanks.h"
-#include "Tank.h"
 #include "Zombie.h"
+#include "BatteryCollector.h"
+#include "BatteryCollectorCharacter.h"
 
 
 // Sets default values
@@ -48,7 +48,7 @@ void AZombie::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 void AZombie::SetTarget(AActor* NewTarget)
 {
 	TargetActor = NewTarget;
-	TargetTank = Cast<ATank>(NewTarget);
+	TargetBatteryCollectorCharacter = Cast<ABatteryCollectorCharacter>(NewTarget);
 }
 
 AActor* AZombie::GetTarget()
@@ -56,7 +56,7 @@ AActor* AZombie::GetTarget()
 	return TargetActor;
 }
 
-ATank* AZombie::GetTargetAsTank()
+ABatteryCollectorCharacter* AZombie::GetTargetAsBatteryCollectorCharacter()
 {
-	return TargetTank;
+	return TargetBatteryCollectorCharacter;
 }
