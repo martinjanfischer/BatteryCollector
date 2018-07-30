@@ -2974,8 +2974,6 @@ Binaries
 Autosaves
 /Intermediate/Build/Win64/UE4Editor/Development/BatteryCollector/Zombie.cpp.obj
 /Intermediate/Build/Win64/UE4Editor/Development/BatteryCollector/Zombie.gen.cpp.obj
-UE4
-BatteryCollector
 /Intermediate/Build/Win64/BatteryCollectorEditor/DebugGame/Makefile.ubt
 /Intermediate/Build/Win64/UE4Editor/DebugGame/UE4Editor-BatteryCollector-Win64-DebugGame.dll.response
 /Intermediate/Build/Win64/UE4Editor/DebugGame/UE4Editor-BatteryCollector-Win64-DebugGame.exp
@@ -2983,3 +2981,5 @@ BatteryCollector
 /Intermediate/Build/Win64/UE4Editor/DebugGame/UE4Editor-BatteryCollector-Win64-DebugGame.lib.response
 /Intermediate/Build/Win64/UE4Editor/DebugGame/UE4Editor-BatteryCollector-Win64-DebugGame.suppressed.exp
 /Intermediate/Build/Win64/UE4Editor/DebugGame/UE4Editor-BatteryCollector-Win64-DebugGame.suppressed.lib
+/Intermediate/Build/Win64/UE4Editor/Development/BatteryCollector/ZombieBrains.cpp.obj
+/Intermediate/Build/Win64/UE4Editor/Development/BatteryCollector/ZombieBrains.gen.cpp.obj
