@@ -42,8 +42,8 @@ public:
 
 	// Zombies will call this on Tick.
 	UFUNCTION(BlueprintNativeEvent, Category = "AI")
-	void ZombieAI();
-	virtual void ZombieAI_Implementation();
+	void ZombieAI(float DeltaSeconds);
+	virtual void ZombieAI_Implementation(float DeltaSeconds);
 
 	// This function asks the zombie if it is in position to attack its current target. It does not actually
 	UFUNCTION(BlueprintNativeEvent, Category = "AI")

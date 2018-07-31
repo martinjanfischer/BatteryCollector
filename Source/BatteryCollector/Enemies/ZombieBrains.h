@@ -6,7 +6,7 @@
 #include "AIController.h"
 #include "ZombieBrains.generated.h"
 
-class AZombie;
+//class AZombie;
 
 /**
  * 
@@ -27,5 +27,5 @@ public:
 protected:
 	// Our pawn, pre-cast to a Zombie. Will be NULL if the pawn is NULL or is not a Zombie.
 	UPROPERTY(BlueprintReadOnly, Category = "Zombie")
-	AZombie* PawnAsZombie;
+	class AZombie* PawnAsZombie;
 };

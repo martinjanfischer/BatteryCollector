@@ -36,6 +36,7 @@ void AZombie::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	ZombieAI(DeltaTime);
 }
 
 // Called to bind functionality to input
@@ -45,7 +46,7 @@ void AZombie::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 }
 
-bool AZombie::ZombieAI_Implementation()
+void AZombie::ZombieAI_Implementation(float DeltaSeconds)
 {
 	// The zombie always moves unless attacking. If moving, it moves between WalkSpeed and RunSpeed.
 	FVector DesiredMovement = GetAttackInput() ? FVector::ZeroVector : (FMath::GetMappedRangeValueClamped(FVector2D(0.0f, 1.0f), FVector2D(WalkSpeed, RunSpeed), GetPendingMovementInputVector().X)) * DeltaSeconds * GetActorForwardVector();
@@ -80,10 +81,10 @@ bool AZombie::ZombieAI_Implementation()
 				float DistSqXY = FVector::DistSquaredXY(Target->GetActorLocation(), OurLocation);
 				if (DistSqXY <= (AttackDistance * AttackDistance))
 				{
-					if (ATank* TankTarget = GetTargetAsTank())
+					if (ABatteryCollectorCharacter* BatteryCollectorCharacterTarget = GetTargetAsBatteryCollectorCharacter())
 					{
-						//TankTarget->DamageHealth(10.0f);
-						if (APlayerController* PC = Cast<APlayerController>(TankTarget->GetController()))
+						//BatteryCollectorCharacterTarget->DamageHealth(10.0f);
+						if (APlayerController* PC = Cast<APlayerController>(BatteryCollectorCharacterTarget->GetController()))
 						{
 							PC->ClientPlayCameraShake(HitShake, 1.0f);
 						}
@@ -112,9 +113,11 @@ bool AZombie::ZombieAIShouldAttack_Implementation()
 			if (DistSqXY <= (AttackDistance * AttackDistance))
 			{
 				// Note that attacking cooldown isn't checked. We don't want this kind of zombie to move 
+				return true;
 			}
 		}
 	}
+	return false;
 }
 
 void AZombie::SetTarget(AActor* NewTarget)

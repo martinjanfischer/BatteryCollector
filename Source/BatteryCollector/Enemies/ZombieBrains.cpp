@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-//#include "Zombie.h"
 #include "ZombieBrains.h"
+#include "BatteryCollector.h"
 #include "Zombie.h"
 
 

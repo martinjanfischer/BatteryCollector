@@ -13,9 +13,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define BATTERYCOLLECTOR_ZombieBrains_generated_h
 
-#define BatteryCollector_Source_BatteryCollector_Enemies_ZombieBrains_h_15_RPC_WRAPPERS
-#define BatteryCollector_Source_BatteryCollector_Enemies_ZombieBrains_h_15_RPC_WRAPPERS_NO_PURE_DECLS
-#define BatteryCollector_Source_BatteryCollector_Enemies_ZombieBrains_h_15_INCLASS_NO_PURE_DECLS \
+#define BatteryCollector_Source_BatteryCollector_Enemies_ZombieBrains_h_17_RPC_WRAPPERS
+#define BatteryCollector_Source_BatteryCollector_Enemies_ZombieBrains_h_17_RPC_WRAPPERS_NO_PURE_DECLS
+#define BatteryCollector_Source_BatteryCollector_Enemies_ZombieBrains_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAZombieBrains(); \
 	friend BATTERYCOLLECTOR_API class UClass* Z_Construct_UClass_AZombieBrains(); \
@@ -25,7 +25,7 @@ public: \
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define BatteryCollector_Source_BatteryCollector_Enemies_ZombieBrains_h_15_INCLASS \
+#define BatteryCollector_Source_BatteryCollector_Enemies_ZombieBrains_h_17_INCLASS \
 private: \
 	static void StaticRegisterNativesAZombieBrains(); \
 	friend BATTERYCOLLECTOR_API class UClass* Z_Construct_UClass_AZombieBrains(); \
@@ -35,7 +35,7 @@ public: \
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define BatteryCollector_Source_BatteryCollector_Enemies_ZombieBrains_h_15_STANDARD_CONSTRUCTORS \
+#define BatteryCollector_Source_BatteryCollector_Enemies_ZombieBrains_h_17_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AZombieBrains(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AZombieBrains) \
@@ -48,7 +48,7 @@ private: \
 public:
 
 
-#define BatteryCollector_Source_BatteryCollector_Enemies_ZombieBrains_h_15_ENHANCED_CONSTRUCTORS \
+#define BatteryCollector_Source_BatteryCollector_Enemies_ZombieBrains_h_17_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AZombieBrains(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -61,26 +61,29 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AZombieBrains); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AZombieBrains)
 
 
-#define BatteryCollector_Source_BatteryCollector_Enemies_ZombieBrains_h_15_PRIVATE_PROPERTY_OFFSET
-#define BatteryCollector_Source_BatteryCollector_Enemies_ZombieBrains_h_12_PROLOG
-#define BatteryCollector_Source_BatteryCollector_Enemies_ZombieBrains_h_15_GENERATED_BODY_LEGACY \
+#define BatteryCollector_Source_BatteryCollector_Enemies_ZombieBrains_h_17_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__PawnAsZombie() { return STRUCT_OFFSET(AZombieBrains, PawnAsZombie); }
+
+
+#define BatteryCollector_Source_BatteryCollector_Enemies_ZombieBrains_h_14_PROLOG
+#define BatteryCollector_Source_BatteryCollector_Enemies_ZombieBrains_h_17_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	BatteryCollector_Source_BatteryCollector_Enemies_ZombieBrains_h_15_PRIVATE_PROPERTY_OFFSET \
-	BatteryCollector_Source_BatteryCollector_Enemies_ZombieBrains_h_15_RPC_WRAPPERS \
-	BatteryCollector_Source_BatteryCollector_Enemies_ZombieBrains_h_15_INCLASS \
-	BatteryCollector_Source_BatteryCollector_Enemies_ZombieBrains_h_15_STANDARD_CONSTRUCTORS \
+	BatteryCollector_Source_BatteryCollector_Enemies_ZombieBrains_h_17_PRIVATE_PROPERTY_OFFSET \
+	BatteryCollector_Source_BatteryCollector_Enemies_ZombieBrains_h_17_RPC_WRAPPERS \
+	BatteryCollector_Source_BatteryCollector_Enemies_ZombieBrains_h_17_INCLASS \
+	BatteryCollector_Source_BatteryCollector_Enemies_ZombieBrains_h_17_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define BatteryCollector_Source_BatteryCollector_Enemies_ZombieBrains_h_15_GENERATED_BODY \
+#define BatteryCollector_Source_BatteryCollector_Enemies_ZombieBrains_h_17_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	BatteryCollector_Source_BatteryCollector_Enemies_ZombieBrains_h_15_PRIVATE_PROPERTY_OFFSET \
-	BatteryCollector_Source_BatteryCollector_Enemies_ZombieBrains_h_15_RPC_WRAPPERS_NO_PURE_DECLS \
-	BatteryCollector_Source_BatteryCollector_Enemies_ZombieBrains_h_15_INCLASS_NO_PURE_DECLS \
-	BatteryCollector_Source_BatteryCollector_Enemies_ZombieBrains_h_15_ENHANCED_CONSTRUCTORS \
+	BatteryCollector_Source_BatteryCollector_Enemies_ZombieBrains_h_17_PRIVATE_PROPERTY_OFFSET \
+	BatteryCollector_Source_BatteryCollector_Enemies_ZombieBrains_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+	BatteryCollector_Source_BatteryCollector_Enemies_ZombieBrains_h_17_INCLASS_NO_PURE_DECLS \
+	BatteryCollector_Source_BatteryCollector_Enemies_ZombieBrains_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
