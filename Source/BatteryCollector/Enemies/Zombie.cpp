@@ -8,7 +8,8 @@
 // Sets default values
 AZombie::AZombie()
 {
- 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+ 	// Set this character to call Tick() every frame.
+	// You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
 	AutoPossessAI = EAutoPossessAI::PlacedInWorldOrSpawned;
@@ -48,12 +49,19 @@ void AZombie::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 void AZombie::ZombieAI_Implementation(float DeltaSeconds)
 {
-	// The zombie always moves unless attacking. If moving, it moves between WalkSpeed and RunSpeed.
-	FVector DesiredMovement = GetAttackInput() ? FVector::ZeroVector : (FMath::GetMappedRangeValueClamped(FVector2D(0.0f, 1.0f), FVector2D(WalkSpeed, RunSpeed), GetPendingMovementInputVector().X)) * DeltaSeconds * GetActorForwardVector();
+	// The zombie always moves unless attacking.
+	// If moving, it moves between WalkSpeed and RunSpeed.
+	FVector DesiredMovement = GetAttackInput() 
+		? FVector::ZeroVector 
+		: (FMath::GetMappedRangeValueClamped(
+			FVector2D(0.0f, 1.0f),
+			FVector2D(WalkSpeed, RunSpeed),
+			GetPendingMovementInputVector().X)) * DeltaSeconds * GetActorForwardVector();
 	FVector OriginalLocation = GetActorLocation();
 	FVector DesiredLoc = OriginalLocation + DesiredMovement;
 	float MaxYawThisFrame = YawSpeed * DeltaSeconds;
-	FRotator DesiredRot = GetActorRotation() + FRotator(0.0f, FMath::Clamp(GetRotationInput(), -MaxYawThisFrame, MaxYawThisFrame), 0.0f);
+	FRotator DesiredRot = GetActorRotation() + FRotator(
+		0.0f, FMath::Clamp(GetRotationInput(), -MaxYawThisFrame, MaxYawThisFrame), 0.0f);
 	
 	SetActorLocationAndRotation(DesiredLoc, DesiredRot.Quaternion(), true);
 	FVector DistanceWalked = GetActorLocation() - OriginalLocation;
@@ -103,7 +111,8 @@ bool AZombie::ZombieAIShouldAttack_Implementation()
 {
 	if (AActor* Target = GetTarget())
 	{
-		// Attack our target if we're in range (distance and angle). For now, we'll use our unmodified at
+		// Attack our target if we're in range (distance and angle).
+		// For now, we'll use our unmodified at
 		FVector OurLocation = GetActorLocation();
 		FVector DirectionToTarget = (Target->GetActorLocation() - OurLocation).GetSafeNormal2D();
 		float DotToTarget = FVector::DotProduct(DirectionToTarget, GetActorForwardVector());
@@ -112,7 +121,8 @@ bool AZombie::ZombieAIShouldAttack_Implementation()
 			float DistSqXY = FVector::DistSquaredXY(Target->GetActorLocation(), OurLocation);
 			if (DistSqXY <= (AttackDistance * AttackDistance))
 			{
-				// Note that attacking cooldown isn't checked. We don't want this kind of zombie to move 
+				// Note that attacking cooldown isn't checked.
+				// We don't want this kind of zombie to move 
 				return true;
 			}
 		}
@@ -135,10 +145,6 @@ ABatteryCollectorCharacter* AZombie::GetTargetAsBatteryCollectorCharacter()
 {
 	return TargetBatteryCollectorCharacter;
 }
-
-//bool AZombie::ZombieAIShouldAttack()
-//{
-//}
 
 void AZombie::AddRotationInput(float DeltaYawDegrees)
 {
