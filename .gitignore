@@ -2983,3 +2983,4 @@ Autosaves
 /Intermediate/Build/Win64/UE4Editor/DebugGame/UE4Editor-BatteryCollector-Win64-DebugGame.suppressed.lib
 /Intermediate/Build/Win64/UE4Editor/Development/BatteryCollector/ZombieBrains.cpp.obj
 /Intermediate/Build/Win64/UE4Editor/Development/BatteryCollector/ZombieBrains.gen.cpp.obj
+/Intermediate/Build/Win64/BatteryCollectorEditor/*.buildmutex
