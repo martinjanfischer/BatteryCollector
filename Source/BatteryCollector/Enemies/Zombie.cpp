@@ -72,7 +72,7 @@ void AZombie::ZombieAI_Implementation(float DeltaSeconds)
 	FVector DistanceWalked = GetActorLocation() - OriginalLocation;
 	if (!DistanceWalked.IsNearlyZero())
 	{
-		//ZombieWalk(DeltaSeconds, DistanceWalked);
+		ZombieWalk(DeltaSeconds, DistanceWalked);
 	}
 	
 	// See if we have a target and deal with it if we do. Find a target if we don't.
@@ -88,7 +88,7 @@ void AZombie::ZombieAI_Implementation(float DeltaSeconds)
 		if (GetAttackInput() && (AttackAvailableTime <= CurrentTime))
 		{
 			AttackAvailableTime = CurrentTime + AttackCooldown;
-			//ZombieAttack(DeltaSeconds);
+			ZombieAttack(DeltaSeconds);
 			if (DotToTarget >= FMath::Cos(FMath::DegreesToRadians(AttackAngle)))
 			{
 				float DistSqXY = FVector::DistSquaredXY(Target->GetActorLocation(), OurLocation);
