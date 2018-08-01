@@ -51,12 +51,12 @@ public:
 	virtual bool ZombieAIShouldAttack_Implementation();
 
 	// This can be used to animate walking.
-	UFUNCTION(BlueprintImplementableEvent, Category = "AI")
-	bool ZombieWalk(float DeltaSeconds, FVector DistanceWalkedThisFrame);
+	//UFUNCTION(BlueprintImplementableEvent, Category = "AI")
+	//bool ZombieWalk(float DeltaSeconds, FVector DistanceWalkedThisFrame);
 
 	// This can be used to start attack animations.
-	UFUNCTION(BlueprintImplementableEvent, Category = "AI")
-	bool ZombieAttack(float DeltaSeconds);
+	//UFUNCTION(BlueprintImplementableEvent, Category = "AI")
+	//bool ZombieAttack(float DeltaSeconds);
 	
 	/** Add rotation equal to the yaw (in degrees) provided. */
 	UFUNCTION(BlueprintCallable, Category = "Pawn|Input", meta = (Keywords = "AddInput"))

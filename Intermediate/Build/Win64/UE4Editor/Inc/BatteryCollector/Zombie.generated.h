@@ -10,7 +10,6 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 class ABatteryCollectorCharacter;
 class AActor;
-struct FVector;
 #ifdef BATTERYCOLLECTOR_Zombie_generated_h
 #error "Zombie.generated.h already included, missing '#pragma once' in Zombie.h"
 #endif
@@ -217,29 +216,6 @@ struct FVector;
  \
 		/** Constructor, initializes return property only **/ \
 		Zombie_eventZombieAIShouldAttack_Parms() \
-			: ReturnValue(false) \
-		{ \
-		} \
-	}; \
-	struct Zombie_eventZombieAttack_Parms \
-	{ \
-		float DeltaSeconds; \
-		bool ReturnValue; \
- \
-		/** Constructor, initializes return property only **/ \
-		Zombie_eventZombieAttack_Parms() \
-			: ReturnValue(false) \
-		{ \
-		} \
-	}; \
-	struct Zombie_eventZombieWalk_Parms \
-	{ \
-		float DeltaSeconds; \
-		FVector DistanceWalkedThisFrame; \
-		bool ReturnValue; \
- \
-		/** Constructor, initializes return property only **/ \
-		Zombie_eventZombieWalk_Parms() \
 			: ReturnValue(false) \
 		{ \
 		} \

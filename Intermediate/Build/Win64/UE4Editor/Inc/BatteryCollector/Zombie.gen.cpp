@@ -30,9 +30,6 @@ void EmptyLinkFunctionForGeneratedCodeZombie() {}
 	BATTERYCOLLECTOR_API UFunction* Z_Construct_UFunction_AZombie_SetTarget();
 	BATTERYCOLLECTOR_API UFunction* Z_Construct_UFunction_AZombie_ZombieAI();
 	BATTERYCOLLECTOR_API UFunction* Z_Construct_UFunction_AZombie_ZombieAIShouldAttack();
-	BATTERYCOLLECTOR_API UFunction* Z_Construct_UFunction_AZombie_ZombieAttack();
-	BATTERYCOLLECTOR_API UFunction* Z_Construct_UFunction_AZombie_ZombieWalk();
-	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraShake_NoRegister();
 // End Cross Module References
@@ -48,23 +45,6 @@ void EmptyLinkFunctionForGeneratedCodeZombie() {}
 	{
 		Zombie_eventZombieAIShouldAttack_Parms Parms;
 		ProcessEvent(FindFunctionChecked(NAME_AZombie_ZombieAIShouldAttack),&Parms);
-		return !!Parms.ReturnValue;
-	}
-	static FName NAME_AZombie_ZombieAttack = FName(TEXT("ZombieAttack"));
-	bool AZombie::ZombieAttack(float DeltaSeconds)
-	{
-		Zombie_eventZombieAttack_Parms Parms;
-		Parms.DeltaSeconds=DeltaSeconds;
-		ProcessEvent(FindFunctionChecked(NAME_AZombie_ZombieAttack),&Parms);
-		return !!Parms.ReturnValue;
-	}
-	static FName NAME_AZombie_ZombieWalk = FName(TEXT("ZombieWalk"));
-	bool AZombie::ZombieWalk(float DeltaSeconds, FVector DistanceWalkedThisFrame)
-	{
-		Zombie_eventZombieWalk_Parms Parms;
-		Parms.DeltaSeconds=DeltaSeconds;
-		Parms.DistanceWalkedThisFrame=DistanceWalkedThisFrame;
-		ProcessEvent(FindFunctionChecked(NAME_AZombie_ZombieWalk),&Parms);
 		return !!Parms.ReturnValue;
 	}
 	void AZombie::StaticRegisterNativesAZombie()
@@ -353,56 +333,6 @@ void EmptyLinkFunctionForGeneratedCodeZombie() {}
 		}
 		return ReturnFunction;
 	}
-	UFunction* Z_Construct_UFunction_AZombie_ZombieAttack()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			auto NewProp_ReturnValue_SetBit = [](void* Obj){ ((Zombie_eventZombieAttack_Parms*)Obj)->ReturnValue = 1; };
-			static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue = { UE4CodeGen_Private::EPropertyClass::Bool, "ReturnValue", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000580, 1, nullptr, sizeof(bool), UE4CodeGen_Private::ENativeBool::Native, sizeof(Zombie_eventZombieAttack_Parms), &UE4CodeGen_Private::TBoolSetBitWrapper<decltype(NewProp_ReturnValue_SetBit)>::SetBit, METADATA_PARAMS(nullptr, 0) };
-			static const UE4CodeGen_Private::FFloatPropertyParams NewProp_DeltaSeconds = { UE4CodeGen_Private::EPropertyClass::Float, "DeltaSeconds", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000080, 1, nullptr, STRUCT_OFFSET(Zombie_eventZombieAttack_Parms, DeltaSeconds), METADATA_PARAMS(nullptr, 0) };
-			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
-				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_ReturnValue,
-				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_DeltaSeconds,
-			};
-#if WITH_METADATA
-			static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-				{ "Category", "AI" },
-				{ "ModuleRelativePath", "Enemies/Zombie.h" },
-				{ "ToolTip", "This can be used to start attack animations." },
-			};
-#endif
-			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AZombie, "ZombieAttack", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08020800, sizeof(Zombie_eventZombieAttack_Parms), PropPointers, ARRAY_COUNT(PropPointers), 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
-		}
-		return ReturnFunction;
-	}
-	UFunction* Z_Construct_UFunction_AZombie_ZombieWalk()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			auto NewProp_ReturnValue_SetBit = [](void* Obj){ ((Zombie_eventZombieWalk_Parms*)Obj)->ReturnValue = 1; };
-			static const UE4CodeGen_Private::FBoolPropertyParams NewProp_ReturnValue = { UE4CodeGen_Private::EPropertyClass::Bool, "ReturnValue", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000580, 1, nullptr, sizeof(bool), UE4CodeGen_Private::ENativeBool::Native, sizeof(Zombie_eventZombieWalk_Parms), &UE4CodeGen_Private::TBoolSetBitWrapper<decltype(NewProp_ReturnValue_SetBit)>::SetBit, METADATA_PARAMS(nullptr, 0) };
-			static const UE4CodeGen_Private::FStructPropertyParams NewProp_DistanceWalkedThisFrame = { UE4CodeGen_Private::EPropertyClass::Struct, "DistanceWalkedThisFrame", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000080, 1, nullptr, STRUCT_OFFSET(Zombie_eventZombieWalk_Parms, DistanceWalkedThisFrame), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(nullptr, 0) };
-			static const UE4CodeGen_Private::FFloatPropertyParams NewProp_DeltaSeconds = { UE4CodeGen_Private::EPropertyClass::Float, "DeltaSeconds", RF_Public|RF_Transient|RF_MarkAsNative, 0x0010000000000080, 1, nullptr, STRUCT_OFFSET(Zombie_eventZombieWalk_Parms, DeltaSeconds), METADATA_PARAMS(nullptr, 0) };
-			static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[] = {
-				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_ReturnValue,
-				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_DistanceWalkedThisFrame,
-				(const UE4CodeGen_Private::FPropertyParamsBase*)&NewProp_DeltaSeconds,
-			};
-#if WITH_METADATA
-			static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-				{ "Category", "AI" },
-				{ "ModuleRelativePath", "Enemies/Zombie.h" },
-				{ "ToolTip", "This can be used to animate walking." },
-			};
-#endif
-			static const UE4CodeGen_Private::FFunctionParams FuncParams = { (UObject*(*)())Z_Construct_UClass_AZombie, "ZombieWalk", RF_Public|RF_Transient|RF_MarkAsNative, nullptr, (EFunctionFlags)0x08820800, sizeof(Zombie_eventZombieWalk_Parms), PropPointers, ARRAY_COUNT(PropPointers), 0, 0, METADATA_PARAMS(Function_MetaDataParams, ARRAY_COUNT(Function_MetaDataParams)) };
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, FuncParams);
-		}
-		return ReturnFunction;
-	}
 	UClass* Z_Construct_UClass_AZombie_NoRegister()
 	{
 		return AZombie::StaticClass();
@@ -428,8 +358,6 @@ void EmptyLinkFunctionForGeneratedCodeZombie() {}
 				{ &Z_Construct_UFunction_AZombie_SetTarget, "SetTarget" }, // 948223360
 				{ &Z_Construct_UFunction_AZombie_ZombieAI, "ZombieAI" }, // 547587812
 				{ &Z_Construct_UFunction_AZombie_ZombieAIShouldAttack, "ZombieAIShouldAttack" }, // 1756147604
-				{ &Z_Construct_UFunction_AZombie_ZombieAttack, "ZombieAttack" }, // 3419272161
-				{ &Z_Construct_UFunction_AZombie_ZombieWalk, "ZombieWalk" }, // 1977909826
 			};
 #if WITH_METADATA
 			static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[] = {
@@ -584,7 +512,7 @@ void EmptyLinkFunctionForGeneratedCodeZombie() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AZombie, 590246361);
+	IMPLEMENT_CLASS(AZombie, 1112795193);
 	static FCompiledInDefer Z_CompiledInDefer_UClass_AZombie(Z_Construct_UClass_AZombie, &AZombie::StaticClass, TEXT("/Script/BatteryCollector"), TEXT("AZombie"), false, nullptr, nullptr, nullptr);
 	DEFINE_VTABLE_PTR_HELPER_CTOR(AZombie);
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
